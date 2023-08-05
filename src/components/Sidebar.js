@@ -1,10 +1,10 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+
 function Sidebar() {
   return <>
     <ul className="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-<a className="sidebar-brand d-flex align-items-center justify-content-center" href="javascript(void)">
+<a className="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
     <div className="sidebar-brand-icon rotate-n-15">
         <i className="fas fa-laugh-wink"></i>
     </div>
@@ -14,9 +14,9 @@ function Sidebar() {
 <hr className="sidebar-divider my-0"/>
 
 <li className="nav-item active">
-    <Link to='/dashboard' className="nav-link">
+    <a className="nav-link" href="index.html">
         <i className="fas fa-fw fa-tachometer-alt"></i>
-        <span>Dashboard</span></Link>
+        <span>Dashboard</span></a>
 </li>
 
 <hr className="sidebar-divider"/>
@@ -24,7 +24,21 @@ function Sidebar() {
     Interface
 </div>
 
+<li className="nav-item">
+    <a className="nav-link collapsed" href="javascript(void)" data-toggle="collapse" data-target="#collapseTwo"
+        aria-expanded="true" aria-controls="collapseTwo">
+        <i className="fas fa-fw fa-cog"></i>
+        <span>Components</span>
+    </a>
+</li>
 
+<li className="nav-item">
+    <a className="nav-link collapsed" href="javascript(void)" data-toggle="collapse" data-target="#collapseUtilities"
+        aria-expanded="true" aria-controls="collapseUtilities">
+        <i className="fas fa-fw fa-wrench"></i>
+        <span>Utilities</span>
+    </a>
+</li>
     </ul>
   </>
 }

@@ -1,11 +1,7 @@
 import React from 'react'
 import Card from "./Card";
-import Table from 'react-bootstrap/Table';
-import Button from 'react-bootstrap/Button';
-import { Link,useNavigate } from 'react-router-dom';
 
-function Dashboard({users,setUsers}) {
-  let navigate = useNavigate()
+function Dashboard() {
   let data = [
     {
       title:"Earnings (Monthly)",
@@ -36,16 +32,12 @@ function Dashboard({users,setUsers}) {
       isProgress:false
     }
   ]
-
-  let handleDelete = (i)=>{
-    let newUsers = [...users]
-    newUsers.splice(i,1)
-    setUsers(newUsers)
-  }
   return <>
      <div className="container-fluid">
             <div className="d-sm-flex align-items-center justify-content-between mb-4">
                 <h1 className="h3 mb-0 text-gray-800">Dashboard</h1>
+                <a href="javascript(void)" className="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                        className="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
             </div>
 
             <div className="row">
@@ -63,11 +55,7 @@ function Dashboard({users,setUsers}) {
                 }
 
             </div>
-      </div>
-      <div className='container-fluid'>
-     
-      </div>
-      
+        </div>
   </>
 }
 
